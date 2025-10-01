@@ -123,9 +123,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="array_utils.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ThreadClass.cpp" />
+    <ClCompile Include="threads.cpp" />
+    <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="array_utils.h" />
+    <ClInclude Include="ThreadClass.h" />
+    <ClInclude Include="threads.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
