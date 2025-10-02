@@ -2,17 +2,17 @@
 #include "utils.h"
 
 std::istream& operator>>(std::istream& in, ThreadData& data) {
-    std::cout << "Введите размер массива: ";
+    std::cout << "Enter the array size: ";
     if (!(in >> data.size) || data.size <= 0) {
-        throw std::runtime_error("Ошибка: размер массива должен быть положительным числом");
+        throw std::runtime_error("Error: array size must be a positive number");
     }
 
     data.arr = new int[data.size];
 
-    std::cout << "Введите " << data.size << " элементов массива:\n";
+    std::cout << "Enter " << data.size << " array elements: \n";
     for (int i = 0; i < data.size; i++) {
         if (!(in >> data.arr[i])) {
-            throw std::runtime_error("Ошибка: элементы массива должны быть целыми числами");
+            throw std::runtime_error("Error: Array elements must be integers");
         }
     }
 
@@ -24,7 +24,7 @@ std::istream& operator>>(std::istream& in, ThreadData& data) {
 }
 
 std::ostream& operator<<(std::ostream& out, const ThreadData& data) {
-    std::cout << "Полученный массив:\n";
+    std::cout << "The resulting array:\n";
     for (int i = 0; i < data.size; i++) {
         std::cout << data.arr[i] << " ";
     }

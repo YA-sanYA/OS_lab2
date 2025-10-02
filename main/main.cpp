@@ -6,8 +6,6 @@
 #include "ThreadClass.h"
 
 int main() {
-    setlocale(LC_ALL, "Russian");
-
     ThreadData data;
 
     try {
@@ -27,7 +25,7 @@ int main() {
         return 0;
     }
     catch (const std::exception e) {
-        std::cerr << "Во время работы программы возникло исключение:\n" << e.what() << "\n";
+        std::cerr << "An exception occurred while the program was running: \n" << e.what() << "\n";
 
         return 1;
     }

@@ -6,13 +6,13 @@ ThreadClass::ThreadClass(LPTHREAD_START_ROUTINE func, LPVOID lpParam, const std:
 
 	hThread = CreateThread(NULL, 0, func, lpParam, 0, NULL);
 	if (hThread == NULL) {
-		throw std::runtime_error("Ошибка: не удалось создать поток " + name);
+		throw std::runtime_error("Error: Failed to create stream " + name);
 	}
 }
 
 void ThreadClass::wait() {
 	if (WaitForSingleObject(hThread, INFINITE) != WAIT_OBJECT_0) {
-		throw std::runtime_error("Ошибка при ожидании завершения потока " + name);
+		throw std::runtime_error("Error waiting for thread to complete " + name);
 	}
 }
 

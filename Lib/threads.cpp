@@ -36,7 +36,7 @@ DWORD WINAPI average(LPVOID lpParam) {
 
     data->average = sum / data->size;
 
-    std::cout << "Среднее арифметическое = " << data->average << "\n";
+    std::cout << "Average = " << data->average << "\n";
     std::cout.flush();
     return 0;
 }
