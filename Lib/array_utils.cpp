@@ -1,4 +1,6 @@
+#include "pch.h"
 #include "array_utils.h"
+
 
 void replaceMinMaxWithAverage(ThreadData& data) {
     for (int i = 0; i < data.size; i++) {

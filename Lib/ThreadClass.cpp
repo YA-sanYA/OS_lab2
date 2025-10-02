@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "ThreadClass.h"
 
 ThreadClass::ThreadClass(LPTHREAD_START_ROUTINE func, LPVOID lpParam, const std::string& name) {
